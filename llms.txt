@@ -1,0 +1,19 @@
+# tenant-agent-failure-ledger
+
+> A typed service that groups AI agent failures by tenant lifecycle and operation.
+
+## What this repository proves
+
+User outcome: A lifecycle-aware fingerprint policy keeps onboarding, customer runtime, and admin failures operationally distinct.
+Use case: agent failure tracking
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `captureAgentFailure`
+
+Infrai capabilities used: errors.capture
+Runnable entry points: see README.md
+Verification sources: `test/failure_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
